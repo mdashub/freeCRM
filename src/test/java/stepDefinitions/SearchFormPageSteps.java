@@ -16,7 +16,8 @@ import io.cucumber.java.en.When;
 
 public class SearchFormPageSteps {
 
-	SearchFormPage searchFormPage = new SearchFormPage(LoginPageSteps.crmapp);
+	LoginPageSteps lps = new LoginPageSteps();
+	SearchFormPage searchFormPage = new SearchFormPage(lps.getCrmapp());
 
 	@Given("user clicks on Full Search Form in Contacts")
 	public void full_Search_form_Contacts() {

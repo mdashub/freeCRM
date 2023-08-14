@@ -14,11 +14,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import lombok.Getter;
 
 public class LoginPageSteps {
 	
 	LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
-	public static CRMApp crmapp ;
+	private static CRMApp crmapp ;
 	
 	
 	@Given("the application is loaded and launched")
@@ -82,9 +83,10 @@ public class LoginPageSteps {
 
 	
 	
-	/*
-	 * public CRMApp getCrmapp() { return crmapp; }
-	 */
+		
+	  public CRMApp getCrmapp() 
+	  { return crmapp; }
+	 
 	
 	
 }

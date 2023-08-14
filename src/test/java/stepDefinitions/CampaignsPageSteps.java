@@ -10,8 +10,8 @@ import io.cucumber.java.en.When;
 
 public class CampaignsPageSteps {
 
-	SoftAssert softAssert = new SoftAssert();
-	CampaignsPage campaignsPage = new CampaignsPage(LoginPageSteps.crmapp);
+	LoginPageSteps lps = new LoginPageSteps();
+	CampaignsPage campaignsPage = new CampaignsPage(lps.getCrmapp());
 
 	@Given("User click on Campaigns")
 	public void clickOnCampaignsMenu() {
@@ -22,7 +22,7 @@ public class CampaignsPageSteps {
 	@When("User sees table with NewSMSCampaign")
 	public void checkNewSMSCampaign() {
 		boolean flag = campaignsPage.doCheckNewSMSCampaign();
-
+		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(false);
 		softAssert.assertAll();
 
